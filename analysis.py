@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import StandardScaler
+from sklearn.cluster import KMeans
 
 # Load dataset
 public_df = pd.read_csv("public_data.csv", header=None)
@@ -39,13 +40,6 @@ for ax, (x, y) in zip(axes, pairs):
 fig3.tight_layout()
 fig3.savefig("inter_dim_scatter.png")
 
-print("✅ Saved: original_distribution.png, scaled_distribution.png, inter_dim_scatter.png")
-
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.preprocessing import StandardScaler
-from sklearn.cluster import KMeans
 
 # Load and clean public dataset
 public_df = pd.read_csv("public_data.csv", header=None)
@@ -71,5 +65,3 @@ for ax, (x, y) in zip(axes, pairs):
 
 fig.tight_layout()
 plt.savefig("public_clustering_visualization.png")
-
-print("✅ Saved: public_clustering_visualization.png")
